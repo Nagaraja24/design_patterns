@@ -24,4 +24,9 @@ public class Singleton {
 
 		return instance;
 	}
+
+	// for serialization and deserialization
+	protected Object readResolve() {
+		return getInstance();
+	}
 }
